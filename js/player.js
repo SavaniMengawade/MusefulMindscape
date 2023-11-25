@@ -6,20 +6,6 @@ let masterPlay = document.getElementById('masterPlay');
 let progressBar = document.getElementById('myProgressBar');
 
 
-
-let songs = [
-    {moodName: 'Happy', filePath: 'audio/happy.mp3',imgPath:'assets/happy.svg'},
-    {moodName: 'Happy', filePath: 'audio/happy.mp3',imgPath:'assets/happy.svg'},
-    {moodName: 'Happy', filePath: 'audio/happy.mp3',imgPath:'assets/happy.svg'},
-    {moodName: 'Happy', filePath: 'audio/happy.mp3',imgPath:'assets/happy.svg'},
-    {moodName: 'Happy', filePath: 'audio/happy.mp3',imgPath:'assets/happy.svg'},
-    {moodName: 'Happy', filePath: 'audio/happy.mp3',imgPath:'assets/happy.svg'},
-    {moodName: 'Happy', filePath: 'audio/happy.mp3',imgPath:'assets/happy.svg'},
-    {moodName: 'Happy', filePath: 'audio/happy.mp3',imgPath:'assets/happy.svg'}
-]
-
-
-
 //handle play-pause play
 
 masterPlay.addEventListener('click', ()=>{
@@ -36,7 +22,6 @@ masterPlay.addEventListener('click', ()=>{
 
 
 //handle seekbar
-
 
 
 
@@ -59,6 +44,41 @@ function updateChange(){
     audioElement.currentTime = progressBar.value * audioElement.duration/100;
 }
 
+
+//extract mood
+
+const queryString = window.location.search;
+const params = new URLSearchParams(queryString);
+const mood =  params.get('mood');
+
+// console.log("mood = " + mood);
+
+
+//update music title
+const moodTitleElement = document.querySelector('.genreTitle');
+moodTitleElement.innerText = mood + " Tunes";
+console.log("mood = " + moodTitleElement);
+
+
+//update bg color
+const backgroundColor = document.getElementById('musicPlayer');
+backgroundColor.style.backgroundColor = moodDB[mood].bgColor;
+
+//update text color
+const songText = document.querySelector('.songInfo');
+songText.style.color = moodDB[mood].color;
+
+//update Image
+const moodImage = document.querySelector('.moodImg');
+moodImage.src = moodDB[mood].imgFile;
+
+//update navbar color
+const navbar = document.querySelector('.moodList');
+navbar.style.color = moodDB[mood].color;
+
+
+//highlight mood in navbar
+console.log(navbar.innerText.toLowerCase());
 
 
 

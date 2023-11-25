@@ -1,21 +1,46 @@
+// // Wrap every letter in a span
+// var textWrapper = document.querySelector('.firstAnimation');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+// anime.timeline({loop: true})
+//   .add({
+//     targets: '.firstAnimation .letter',
+//     opacity: [0,1],
+//     easing: "easeInOutQuad",
+//     duration: 1250,
+//     delay: (el, i) => 150 * (i+1)
+//   }).add({
+//     targets: '.mfirstAnimationl3',
+//     opacity: 0,
+//     duration: 900,
+//     easing: "easeOutExpo",
+//     delay: 1000
+//   });
+
+
 // Wrap every letter in a span
 var textWrapper = document.querySelector('.firstAnimation');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true})
+anime.timeline({loop: false})
   .add({
     targets: '.firstAnimation .letter',
-    opacity: [0,1],
+    opacity: [0, 1],
     easing: "easeInOutQuad",
     duration: 1250,
-    delay: (el, i) => 150 * (i+1)
+    delay: (el, i) => 150 * (i + 1)
   }).add({
-    targets: '.mfirstAnimationl3',
-    opacity: 0,
+    targets: '.firstAnimation .letter',
+    opacity: 1, // Set opacity to 1
     duration: 900,
     easing: "easeOutExpo",
-    delay: 1000
+    delay: 1000,
+    complete: function (anim) {
+      // Code to run after the animation completes
+      console.log("Animation complete!");
+    }
   });
+
 
 
 
