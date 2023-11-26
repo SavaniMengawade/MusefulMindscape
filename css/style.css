@@ -89,49 +89,49 @@ h2{
     height: 150px;
 }
 
-#happy{
+.happy{
     background-color: #FAF885;
     padding: 2px 40px 10px 40px;
     color: #E4B326;
 }
 
-#romantic{
+.romantic{
     background-color: #F39C9B;
     padding: 2px 40px 10px 40px;
     color: #D45A64;
 }
 
-#relaxed{
+.relaxed{
     background-color: #B7F3E1;
     padding: 2px 40px 10px 40px;
     color: #3AB9B3;
 }
 
-#emo{
+.emo{
     background-color: #89CEE8;
     padding: 2px 40px 10px 40px;
     color: #408DD3;
 }
 
-#motivated{
+.motivated{
     background-color: #ECB58E;
     padding: 2px 40px 10px 40px;
     color: #DF6F2E;
 }
 
-#energized{
+.energized{
     background-color: #DCF094;
     padding: 2px 40px 10px 40px;
     color: #588F2B;
 }
 
-#focus{
+.focus{
     background-color: #FFE0BB;
     padding: 2px 40px 10px 40px;
     color: #F8A544;
 }
 
-#chill{
+.chill{
     background-color: #BFB7F3;
     padding: 2px 40px 10px 40px;
     color: #725FE7;

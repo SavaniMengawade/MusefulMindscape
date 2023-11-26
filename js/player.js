@@ -24,7 +24,6 @@ masterPlay.addEventListener('click', ()=>{
 //handle seekbar
 
 
-
 //time update
 
 audioElement.addEventListener('timeupdate', ()=>{
@@ -78,7 +77,8 @@ navbar.style.color = moodDB[mood].color;
 
 
 //highlight mood in navbar
-console.log(navbar.innerText.toLowerCase());
+const navSelect = document.getElementById(moodDB[mood].mood);
+navSelect.style.fontWeight = 600;
 
 
 
