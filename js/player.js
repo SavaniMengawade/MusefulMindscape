@@ -4,19 +4,19 @@ let moodIndex = 0;
 let audioElement = new Audio('audio/happy.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let progressBar = document.getElementById('myProgressBar');
+let durationDisplay = document.getElementById('durationDisplay');
+let currentTimeDisplay = document.getElementById('currentTimeDisplay');
 
-
+const sound = new Howl({src: ['audio/happy.mp3']});
 //handle play-pause play
 
 masterPlay.addEventListener('click', ()=>{
-    if(audioElement.paused || audioElement.currentTime<=0)
-    {
-        audioElement.play();
-        masterPlay.src = 'assets/pause-solid.svg'
-    }
-    else{
-        audioElement.pause();
-        masterPlay.src = 'assets/play-solid.svg'
+    if (sound.playing()) {
+        sound.pause();
+        masterPlay.src = 'assets/play-solid.svg';
+    } else {
+        sound.play();
+        masterPlay.src = 'assets/pause-solid.svg';
     }
 })
 
@@ -26,22 +26,57 @@ masterPlay.addEventListener('click', ()=>{
 
 //time update
 
-audioElement.addEventListener('timeupdate', ()=>{
-    console.log('timeupdate');
-    //update seekbar
-    let progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
-    console.log(progress);
-    progressBar.value = progress;
-})
+// audioElement.addEventListener('timeupdate', ()=>{
+//     console.log('timeupdate');
+//     //update seekbar
+//     let progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
+//     console.log(progress);
+//     progressBar.value = progress;
+// })
 
 
-//forward when i change
+// //forward when i change
 
-progressBar.addEventListener('change',updateChange);
+// progressBar.addEventListener('change',updateChange);
 
-function updateChange(){
-    audioElement.currentTime = progressBar.value * audioElement.duration/100;
+// function updateChange(){
+//     audioElement.currentTime = progressBar.value * audioElement.duration/100;
+// }
+
+
+// time update
+
+if(sound.seek()>0){
+    console.log(sound.seek());
 }
+
+
+sound.on('seek', () => {
+    // update seekbar
+    let progress = (sound.seek() / sound.duration()) * 100;
+    progressBar.value = progress;
+
+    //update current time display
+    currentTimeDisplay.textContent = formatTime(sound.seek());
+});
+
+//duration update
+sound.on('load', () => {
+    // update total duration display
+    durationDisplay.textContent = formatTime(sound.duration());
+});
+
+// forward when seekbar changes
+progressBar.addEventListener('input', updateChange);
+
+function updateChange() {
+    sound.seek(progressBar.value * sound.duration() / 100);
+}
+
+
+
+
+
 
 
 //extract mood
@@ -81,7 +116,22 @@ const navSelect = document.getElementById(moodDB[mood].mood);
 navSelect.style.fontWeight = 600;
 
 
+function formatTime(timeInSeconds) {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = Math.floor(timeInSeconds % 60);
+    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+}
 
+
+
+let happy = document.getElementById('happy');
+let romantic = document.getElementById('romantic');
+let relaxed = document.getElementById('relaxed');
+let emo = document.getElementById('emo');
+let motivated = document.getElementById('motivated');
+let energized = document.getElementById('energized');
+let focus = document.getElementById('focus');
+let chill = document.getElementById('chill');
 
 
 

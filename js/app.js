@@ -1,24 +1,3 @@
-// // Wrap every letter in a span
-// var textWrapper = document.querySelector('.firstAnimation');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-// anime.timeline({loop: true})
-//   .add({
-//     targets: '.firstAnimation .letter',
-//     opacity: [0,1],
-//     easing: "easeInOutQuad",
-//     duration: 1250,
-//     delay: (el, i) => 150 * (i+1)
-//   }).add({
-//     targets: '.mfirstAnimationl3',
-//     opacity: 0,
-//     duration: 900,
-//     easing: "easeOutExpo",
-//     delay: 1000
-//   });
-
-
-// Wrap every letter in a span
 var textWrapper = document.querySelector('.firstAnimation');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -56,3 +35,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 console.log("Welcome to Museful Mindscape");
+
+
+
+
+Jump('.textContent',{
+  // duration in milliseconds
+  duration: 1000,
+  // offset in pixels
+  offset: 0,
+  // fired after scroll
+  callback: null,
+  
+  // easing function
+  easing: 'easeInOutQuad',
+  // enable accessibility
+  a11y: false
+  
+});
+
+
+
+
+
+
+
