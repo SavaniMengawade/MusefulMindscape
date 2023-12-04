@@ -22,7 +22,6 @@ anime.timeline({loop: false})
 
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var content = document.getElementById('content');
 

@@ -1,4 +1,3 @@
-console.log("Welcome");
 
 let moodIndex = 0;
 let audioElement = new Audio('audio/happy.mp3');
@@ -21,34 +20,34 @@ masterPlay.addEventListener('click', ()=>{
 })
 
 
-//handle seekbar
+sound.on('play', function () {
+    // Set interval to update seekbar and time displays every second
+    let updateInterval = setInterval(function () {
+      // Update seekbar
+      let progress = (sound.seek() / sound.duration()) * 100;
+      progressBar.value = progress;
+  
+      // Update current time display
+      currentTimeDisplay.textContent = formatTime(sound.seek());
+  
+      // Update duration display
+      durationDisplay.textContent = formatTime(sound.duration());
+  
+      // Check if the sound has finished playing
+      if (!sound.playing()) {
+        // Clear the interval if the sound is not playing
+        clearInterval(updateInterval);
+      }
+    }, 1000);
+  });
+  
+  // Function to format time in MM:SS
+  function formatTime(timeInSeconds) {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const seconds = Math.floor(timeInSeconds % 60);
+    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+  }
 
-
-//time update
-
-// audioElement.addEventListener('timeupdate', ()=>{
-//     console.log('timeupdate');
-//     //update seekbar
-//     let progress = parseInt((audioElement.currentTime/audioElement.duration)*100);
-//     console.log(progress);
-//     progressBar.value = progress;
-// })
-
-
-// //forward when i change
-
-// progressBar.addEventListener('change',updateChange);
-
-// function updateChange(){
-//     audioElement.currentTime = progressBar.value * audioElement.duration/100;
-// }
-
-
-// time update
-
-if(sound.seek()>0){
-    console.log(sound.seek());
-}
 
 
 sound.on('seek', () => {
@@ -78,7 +77,8 @@ function updateChange() {
 
 
 
-
+//--------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------
 //extract mood
 
 const queryString = window.location.search;
@@ -133,7 +133,52 @@ let energized = document.getElementById('energized');
 let focus = document.getElementById('focus');
 let chill = document.getElementById('chill');
 
+function updateMood(selectedMood) {
+    // Update audio source
+    audioElement.src = `audio/${selectedMood}.mp3`;
 
+    // Update Howl sound source
+    sound.load({ src: [`audio/${selectedMood}.mp3`] });
+
+    // Update music title
+    moodTitleElement.innerText = selectedMood + " Tunes";
+
+    // Update background color
+    backgroundColor.style.backgroundColor = moodDB[selectedMood].bgColor;
+
+    // Update text color
+    songText.style.color = moodDB[selectedMood].color;
+
+    // Update image
+    moodImage.src = moodDB[selectedMood].imgFile;
+
+    // Update navbar color
+    navbar.style.color = moodDB[selectedMood].color;
+
+
+    Object.values(moodDB).forEach((mood) => {
+        const navItem = document.getElementById(mood.mood);
+        if (navItem) {
+            navItem.style.fontWeight = 'normal';
+        }
+    });
+    // Highlight mood in navbar
+    const selectedNav = document.getElementById(moodDB[selectedMood].mood);
+    if (selectedNav) {
+
+        selectedNav.style.fontWeight = 600;
+    }
+}
+
+// Event listeners for each mood button
+happy.addEventListener('click', () => updateMood('Happy'));
+romantic.addEventListener('click', () => updateMood('Romantic'));
+relaxed.addEventListener('click', () => updateMood('Relaxed'));
+emo.addEventListener('click', () => updateMood('Emo'));
+motivated.addEventListener('click', () => updateMood('Motivated'));
+energized.addEventListener('click', () => updateMood('Energized'));
+focus.addEventListener('click', () => updateMood('Focus'));
+chill.addEventListener('click', () => updateMood('Chill'));
 
 
 

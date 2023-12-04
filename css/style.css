@@ -70,7 +70,7 @@ h2{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 70px 200px 0 200px;
+    margin: 40px 200px 20px 200px;
     justify-content: center;
 }
 
@@ -170,14 +170,14 @@ a{
     margin-bottom: 0;
 }
 
-#text{
+.text{
     font-size: 18px;
     font-weight: 300;
     line-height: 1.5;
 }
 
 .textContent p{
-    font-size: 22px;
+    font-size: 19px;
     margin-bottom: 40px;
     margin-top: 15px;
 }
@@ -226,8 +226,7 @@ a{
 .player{
     display: flex;
     justify-content: center;
-    margin: 60px 0px;
-    margin-bottom: 30px;
+    margin: 60px 0 0 0;
 }
 
 .player input{
@@ -262,6 +261,33 @@ a{
     margin-top: -40px;
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
+
+
+
+
+.scrollTo{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.scrollTo p{
+    font-size: 24px;
+    font-weight: 300;
+}
+
+
+.time{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#currentTimeDisplay{
+    margin-right: 500px;
+}
+
+
 
 
 
@@ -360,6 +386,10 @@ a{
 
 
 
+  .moodList p:hover{
+    cursor: pointer;
+  }
+  
 
 
 
@@ -368,6 +398,98 @@ a{
 
 
 
+/* Reset default styles */
+#myProgressBar {
+    -webkit-appearance: none;
+    width: 600px;
+    height: 2px;
+    margin: 20px 0;
+    background: transparent;
+  }
+  
+  /* Track */
+  #myProgressBar::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    cursor: pointer;
+    background: #d6d6d6; /* Light gray track color */
+    border-radius: 5px;
+  }
+  
+  /* Thumb */
+  #myProgressBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #8c8c8c; /* Spotify green */
+    cursor: pointer;
+    margin-top: -3px;
+  }
+  
+  /* Progress Fill */
+  #myProgressBar::-moz-range-progress {
+    background-color: #1db954; /* Spotify green */
+  }
+  
+  #myProgressBar::-webkit-progress-value {
+    background-color: #1db954; /* Spotify green */
+  }
+  
 
 
 
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+    color: #2e2e2e;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    box-shadow: 0px -5px 10px rgba(230, 230, 230, 0.1);
+  }
+
+
+
+
+  .cards{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+  }
+
+  .card{
+    height: 390px;
+    width: 400px;
+    padding: 30px;
+    background-color: #ffffff;
+    margin: 0 20px;
+    margin-bottom: 50px;
+    box-shadow: 0px -5px 10px rgba(152, 152, 152, 0.1);
+  }
+
+  .card p{
+    font-size: 19px;
+  }
+
+  #subtitle{
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  .purple
+  {
+    color: #725FE7;
+  }
+
+  .blue{
+    color:#588F2B;  }
+
+    .orange{
+        color: #D35A63;
+    }
