@@ -89,14 +89,17 @@ h2{
 .spinner img{
     height: 150px;
     animation: spin 15s linear infinite;
+    transition: 500ms;
 }
 
 @keyframes spin{
     0%{
         transform: rotate(0deg);
+        transition: 500ms;
        }
     100%{
         transform: rotate(360deg);
+        transition: 500ms;
        }
 }
 

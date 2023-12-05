@@ -3,49 +3,65 @@ const moodDB = {
         'color' : '#E4B326',
         'bgColor' : '#FAF885',
         'mood' : 'happy',
-        'imgFile':'assets/happy.svg'
+        'imgFile':'assets/happy.svg',
+        'music': 'audio/Happy.mp3',
+        'index': 0
     },
     "Romantic": {
         'color' : '#D45A64',
         'bgColor' : '#F39C9B',
         'mood' : 'romantic',
-        'imgFile':'assets/romantic.svg'
+        'imgFile':'assets/romantic.svg',
+        'music': 'audio/Romantic.mp3',
+        'index': 1
     },
     "Relaxed": {
         'color' : '#3AB9B3',
         'bgColor' : '#B7F3E1',
         'mood' : 'relaxed',
-        'imgFile':'assets/relaxed.svg'
+        'imgFile':'assets/relaxed.svg',
+        'music': 'audio/Relaxed.mp3',
+        'index': 2
     },
     "Emo": {
         'color' : '#418ED3',
         'bgColor' : '#89CEE8',
         'mood' : 'emo',
-        'imgFile':'assets/emo.svg'
+        'imgFile':'assets/emo.svg',
+        'music': 'audio/Emo.mp3',
+        'index': 3
     },
     "Motivated": {
         'color' : '#DF6F2E',
         'bgColor' : '#ECB58E',
         'mood' : 'motivated',
-        'imgFile':'assets/motivated.svg'
+        'imgFile':'assets/motivated.svg',
+        'music': 'audio/Motivated.mp3',
+        'index': 4
     },
     "Energized": {
         'color' : '#588F2B',
         'bgColor' : '#DCF094',
         'mood' : 'energized',
-        'imgFile':'assets/energized.svg'
+        'imgFile':'assets/energized.svg',
+        'music': 'audio/Energized.mp3',
+        'index': 5
     },
     "Focus": {
         'color' : '#F8A544',
         'bgColor' : '#FFE0BB',
         'mood' : 'focus',
-        'imgFile':'assets/focus.svg'
+        'imgFile':'assets/focus.svg',
+        'music': 'audio/Focus.mp3',
+        'index': 6
     },
     "Chill": {
         'color' : '#725FE7',
         'bgColor' : '#BFB7F3',
         'mood' : 'chill',
-        'imgFile':'assets/chill.svg'
+        'imgFile':'assets/chill.svg',
+        'music': 'audio/Chill.mp3',
+        'index': 7
     },
 }
 
