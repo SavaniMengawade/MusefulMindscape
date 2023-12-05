@@ -36,7 +36,6 @@ function updateMood(selectedMood) {
     sound.load()
     console.log(sound);
 
-
     // Update music title
     moodTitleElement.innerText = selectedMood + " Tunes";
 
@@ -66,3 +65,17 @@ function updateMood(selectedMood) {
         selectedNav.style.fontWeight = 600;
     }
 }
+
+
+
+
+function updateTimeDisplay() {
+    // Update current time display
+    currentTimeDisplay.textContent = formatTime(sound.seek());
+
+    // Update total duration display
+    durationDisplay.textContent = formatTime(sound.duration());
+}
+
+
+

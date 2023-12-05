@@ -70,6 +70,14 @@ masterPlay.addEventListener('click', ()=>{
 })
 
 
+
+
+
+
+
+
+
+
 sound.on('play', function () {
     // Set interval to update seekbar and time displays every second
     let updateInterval = setInterval(function () {
