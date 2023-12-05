@@ -5,6 +5,7 @@ let masterPlay = document.getElementById('masterPlay');
 let progressBar = document.getElementById('myProgressBar');
 let durationDisplay = document.getElementById('durationDisplay');
 let currentTimeDisplay = document.getElementById('currentTimeDisplay');
+let moodImg = document.querySelector('.musicAnimation');
 
 const sound = new Howl({src: ['audio/happy.mp3']});
 //handle play-pause play
@@ -13,9 +14,12 @@ masterPlay.addEventListener('click', ()=>{
     if (sound.playing()) {
         sound.pause();
         masterPlay.src = 'assets/play-solid.svg';
+        moodImg.classList.remove('spinner');
     } else {
         sound.play();
         masterPlay.src = 'assets/pause-solid.svg';
+        moodImg.classList.add('spinner');
+        // moodImage.parentElement.classList.toggle('playing');
     }
 })
 
@@ -136,9 +140,11 @@ let chill = document.getElementById('chill');
 function updateMood(selectedMood) {
     // Update audio source
     audioElement.src = `audio/${selectedMood}.mp3`;
+    sound.pause();
+    sound.seek(0);
 
     // Update Howl sound source
-    sound.load({ src: [`audio/${selectedMood}.mp3`] });
+    sound.load({ src: ['audio/${selectedMood}.mp3'] });
 
     // Update music title
     moodTitleElement.innerText = selectedMood + " Tunes";

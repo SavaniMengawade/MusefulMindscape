@@ -85,9 +85,22 @@ h2{
     margin-top: 40px;
 }
 
-.moodImg{
+
+.spinner img{
     height: 150px;
+    animation: spin 15s linear infinite;
 }
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+       }
+    100%{
+        transform: rotate(360deg);
+       }
+}
+
+
 
 .happy{
     background-color: #FAF885;
@@ -493,3 +506,6 @@ a{
     .orange{
         color: #D35A63;
     }
+
+
+
