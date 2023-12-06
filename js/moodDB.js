@@ -9,7 +9,7 @@ const moodDB = {
     },
     "Romantic": {
         'color' : '#D45A64',
-        'bgColor' : '#F39C9B',
+        'bgColor' : '#FFA8A7',
         'mood' : 'romantic',
         'imgFile':'assets/romantic.svg',
         'music': 'audio/Romantic.mp3',
@@ -25,7 +25,7 @@ const moodDB = {
     },
     "Emo": {
         'color' : '#418ED3',
-        'bgColor' : '#89CEE8',
+        'bgColor' : '#C1EEFF',
         'mood' : 'emo',
         'imgFile':'assets/emo.svg',
         'music': 'audio/Emo.mp3',
@@ -33,7 +33,7 @@ const moodDB = {
     },
     "Motivated": {
         'color' : '#DF6F2E',
-        'bgColor' : '#ECB58E',
+        'bgColor' : '#FFC59C',
         'mood' : 'motivated',
         'imgFile':'assets/motivated.svg',
         'music': 'audio/Motivated.mp3',
