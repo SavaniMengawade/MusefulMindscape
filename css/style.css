@@ -504,3 +504,19 @@ a{
 
 
 
+
+
+
+  /*---------------------Responsiveness---------------------------*/
+  @media (max-width: 1200px) {
+    #newHeading{
+      font-size: 50px;
+    }
+    .moodList{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .moodList p{
+        margin: 0 28px 20px 28px;
+    }
+  }
