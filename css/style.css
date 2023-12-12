@@ -226,6 +226,7 @@ a{
 .moodList p{
     margin: 0 40px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 #musicPlayer{
