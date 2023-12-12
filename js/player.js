@@ -5,7 +5,8 @@ let progressBar = document.getElementById('myProgressBar');
 let durationDisplay = document.getElementById('durationDisplay');
 let currentTimeDisplay = document.getElementById('currentTimeDisplay');
 let moodImg = document.querySelector('.musicAnimation');
-
+let forwardButton = document.getElementById('forward');
+let backwardButton = document.getElementById('backward');
 
 //handle play-pause play
 
@@ -84,6 +85,15 @@ function updateTimeDisplay() {
 
 
 
+forwardButton.addEventListener('click', function () {
+            // Move forward 10 seconds
+            sound.seek(sound.seek() + 10);
+});
+
+backwardButton.addEventListener('click', function () {
+            // Move backward 10 seconds
+            sound.seek(sound.seek() - 10);
+});
 
 
 
