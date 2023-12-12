@@ -4,7 +4,7 @@ const moodDB = {
         'bgColor' : '#FAF885',
         'mood' : 'happy',
         'imgFile':'assets/happy.svg',
-        'music': 'audio/Happy.mp3',
+        'music': 'audio/happy.mp3',
         'index': 0
     },
     "Romantic": {
@@ -12,7 +12,7 @@ const moodDB = {
         'bgColor' : '#FFA8A7',
         'mood' : 'romantic',
         'imgFile':'assets/romantic.svg',
-        'music': 'audio/Romantic.mp3',
+        'music': 'audio/romantic.mp3',
         'index': 1
     },
     "Relaxed": {
@@ -20,7 +20,7 @@ const moodDB = {
         'bgColor' : '#B7F3E1',
         'mood' : 'relaxed',
         'imgFile':'assets/relaxed.svg',
-        'music': 'audio/Relaxed.mp3',
+        'music': 'audio/relaxed.mp3',
         'index': 2
     },
     "Emo": {
@@ -28,7 +28,7 @@ const moodDB = {
         'bgColor' : '#C1EEFF',
         'mood' : 'emo',
         'imgFile':'assets/emo.svg',
-        'music': 'audio/Emo.mp3',
+        'music': 'audio/emo.mp3',
         'index': 3
     },
     "Motivated": {
@@ -36,7 +36,7 @@ const moodDB = {
         'bgColor' : '#FFC59C',
         'mood' : 'motivated',
         'imgFile':'assets/motivated.svg',
-        'music': 'audio/Motivated.mp3',
+        'music': 'audio/motivated.mp3',
         'index': 4
     },
     "Energized": {
@@ -44,7 +44,7 @@ const moodDB = {
         'bgColor' : '#DCF094',
         'mood' : 'energized',
         'imgFile':'assets/energized.svg',
-        'music': 'audio/Energized.mp3',
+        'music': 'audio/energized.mp3',
         'index': 5
     },
     "Focus": {
@@ -52,7 +52,7 @@ const moodDB = {
         'bgColor' : '#FFE0BB',
         'mood' : 'focus',
         'imgFile':'assets/focus.svg',
-        'music': 'audio/Focus.mp3',
+        'music': 'audio/focus.mp3',
         'index': 6
     },
     "Chill": {
@@ -60,7 +60,7 @@ const moodDB = {
         'bgColor' : '#BFB7F3',
         'mood' : 'chill',
         'imgFile':'assets/chill.svg',
-        'music': 'audio/Chill.mp3',
+        'music': 'audio/chill.mp3',
         'index': 7
     },
 }
