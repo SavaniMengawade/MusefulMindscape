@@ -503,20 +503,83 @@ a{
   }
 
 
-
+  #speech{
+    background-color: white;
+    border: 1px solid #2e2e2e;
+    font-size: 22px;
+    padding: 5px 10px;
+  }
 
 
 
   /*---------------------Responsiveness---------------------------*/
   @media (max-width: 1200px) {
+
+    .body{
+        margin: 0;
+    }
     #newHeading{
-      font-size: 50px;
+      font-size: 38px;
     }
     .moodList{
         display: flex;
         flex-wrap: wrap;
     }
     .moodList p{
-        margin: 0 28px 20px 28px;
+        margin: 0 20px 25px 20px;
+        font-size: 16px;
     }
+    .musicAnimation img{
+        height: 200px;
+        margin-top: 0px;
+    }
+    .musicAnimation{
+        margin-top: 30px;
+    }
+    .songInfo p{
+        font-size: 20px;
+    }
+    #genreTitle{
+        font-size: 25px;
+    }
+    #myProgressBar{
+        width: 300px;
+        margin-top: 0;
+    }
+    .player{
+        margin-top: 60px;
+    }
+    #currentTimeDisplay{
+        margin-right: 210px;
+    }
+    .time p{
+        margin-top: -2px;
+    }
+    .musicIcons{
+        text-align: center;
+    }
+    .musicIcons img{
+        height: 40px;
+    }
+    .chooseMoodBody{
+        margin: 0;
+    }
+    .scrollTo p{
+        font-size: 20px;
+        margin-top: 50px;
+        
+    }
+    .textContent{
+        margin: 100px 60px 100px 60px;
+    }
+    .textContent h4{
+        font-size: 40px;
+    }
+    #speech{
+        background-color: white;
+        border: 1px solid #2e2e2e;
+        font-size: 16px;
+        padding: 5px 10px;
+        margin-bottom: 15px;
+      }
   }
